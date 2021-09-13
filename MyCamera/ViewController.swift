@@ -46,7 +46,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate,UIImagePic
     }
         
         //キャンセルの選択肢を定義
-        let cancelAction = UIAlertAction(title: "キャンセル", style: .default, handler: nil)
+        let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
         alertController.addAction(cancelAction)
         
         //iPadで落ちてしまう対策
