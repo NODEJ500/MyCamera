@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF39E5C926EF7E110073FA5E /* EffectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF39E5C826EF7E110073FA5E /* EffectViewController.swift */; };
 		BFBEC11926EDFB420062F69E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEC11826EDFB420062F69E /* AppDelegate.swift */; };
 		BFBEC11B26EDFB420062F69E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEC11A26EDFB420062F69E /* SceneDelegate.swift */; };
 		BFBEC11D26EDFB420062F69E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFBEC11C26EDFB420062F69E /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BF39E5C826EF7E110073FA5E /* EffectViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EffectViewController.swift; sourceTree = "<group>"; };
 		BFBEC11526EDFB420062F69E /* MyCamera.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyCamera.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BFBEC11826EDFB420062F69E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BFBEC11A26EDFB420062F69E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -60,6 +62,7 @@
 				BFBEC11A26EDFB420062F69E /* SceneDelegate.swift */,
 				BFBEC11C26EDFB420062F69E /* ViewController.swift */,
 				BFBEC11E26EDFB420062F69E /* Main.storyboard */,
+				BF39E5C826EF7E110073FA5E /* EffectViewController.swift */,
 				BFBEC12126EDFB420062F69E /* Assets.xcassets */,
 				BFBEC12326EDFB420062F69E /* LaunchScreen.storyboard */,
 				BFBEC12626EDFB420062F69E /* Info.plist */,
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BFBEC11D26EDFB420062F69E /* ViewController.swift in Sources */,
+				BF39E5C926EF7E110073FA5E /* EffectViewController.swift in Sources */,
 				BFBEC11926EDFB420062F69E /* AppDelegate.swift in Sources */,
 				BFBEC11B26EDFB420062F69E /* SceneDelegate.swift in Sources */,
 			);
