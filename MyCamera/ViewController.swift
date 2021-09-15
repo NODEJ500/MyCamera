@@ -11,7 +11,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate,UIImagePic
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
     @IBOutlet weak var pictureImage: UIImageView!
     
@@ -31,7 +31,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate,UIImagePic
         })
         alertController.addAction(cameraAction)
     }
-       
+        
        //フォトライブラリーが利用可能かチェック
        if UIImagePickerController.isSourceTypeAvailable(.photoLibrary) {
           //フォトライブラリーを起動するための選択肢を定義
@@ -48,27 +48,12 @@ class ViewController: UIViewController,UINavigationControllerDelegate,UIImagePic
         //キャンセルの選択肢を定義
         let cancelAction = UIAlertAction(title: "キャンセル", style: .cancel, handler: nil)
         alertController.addAction(cancelAction)
-        
         //iPadで落ちてしまう対策
         alertController.popoverPresentationController?.sourceView = view
-        
         //選択肢を画面に表示
         present(alertController, animated: true, completion: nil)
-        
     }
-    @IBAction func shareButtonAction(_ sender: Any) {
-        if let shareImage = pictureImage.image {
-            //UIActivityViewControllerにシェア画像を渡す
-            let shareItems = [shareImage]
-            //UIActivityViewControllerにシェア画像を渡す
-            let controller = UIActivityViewController(activityItems: shareItems, applicationActivities: nil)
-            //iPadで落ちてしまう対策
-            controller.popoverPresentationController?.sourceView = view
-            //UIActivityViewControllerを表示
-            present(controller, animated: true, completion: nil)
-        }
-        
-        }
+    
     //(1)撮影が終わった時に呼ばれるdelegateメソッド
     func  imagePickerController(_ picker:UIImagePickerController , didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         //(2)撮影した画像を配置したcaptureImageに渡す
@@ -79,6 +64,7 @@ class ViewController: UIViewController,UINavigationControllerDelegate,UIImagePic
             self.performSegue(withIdentifier: "showEffectView", sender: nil)
         })
     }
+    
     //次の画面に遷移するときに渡す画像を格納する場所
     var captureImage:UIImage?
     
@@ -86,7 +72,6 @@ class ViewController: UIViewController,UINavigationControllerDelegate,UIImagePic
         if let nextViewController = segue.destination as? EffectViewController {
             //次の画面のインスタンスに取得した画像を渡す
             nextViewController.originalImage = captureImage
-        }
+       }
     }
 }
-

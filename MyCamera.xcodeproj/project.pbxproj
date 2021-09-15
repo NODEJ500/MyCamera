@@ -14,6 +14,7 @@
 		BFBEC12026EDFB420062F69E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFBEC11E26EDFB420062F69E /* Main.storyboard */; };
 		BFBEC12226EDFB420062F69E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BFBEC12126EDFB420062F69E /* Assets.xcassets */; };
 		BFBEC12526EDFB420062F69E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BFBEC12326EDFB420062F69E /* LaunchScreen.storyboard */; };
+		BFDF7DDA26F22B4500076229 /* UIImageExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BFDF7DD926F22B4500076229 /* UIImageExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		BFBEC12126EDFB420062F69E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BFBEC12426EDFB420062F69E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BFBEC12626EDFB420062F69E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BFDF7DD926F22B4500076229 /* UIImageExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				BFBEC11C26EDFB420062F69E /* ViewController.swift */,
 				BFBEC11E26EDFB420062F69E /* Main.storyboard */,
 				BF39E5C826EF7E110073FA5E /* EffectViewController.swift */,
+				BFDF7DD926F22B4500076229 /* UIImageExtension.swift */,
 				BFBEC12126EDFB420062F69E /* Assets.xcassets */,
 				BFBEC12326EDFB420062F69E /* LaunchScreen.storyboard */,
 				BFBEC12626EDFB420062F69E /* Info.plist */,
@@ -143,6 +146,7 @@
 				BFBEC11D26EDFB420062F69E /* ViewController.swift in Sources */,
 				BF39E5C926EF7E110073FA5E /* EffectViewController.swift in Sources */,
 				BFBEC11926EDFB420062F69E /* AppDelegate.swift in Sources */,
+				BFDF7DDA26F22B4500076229 /* UIImageExtension.swift in Sources */,
 				BFBEC11B26EDFB420062F69E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

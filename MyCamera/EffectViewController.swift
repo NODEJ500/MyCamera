@@ -91,7 +91,7 @@ class EffectViewController: UIViewController {
          }
     @IBAction func shareButtonAction(_ sender: Any) {
         //表示画像をアンラップしてシェア画像を取り出す
-        if let shareImage = effectImage.image {
+        if let shareImage = effectImage.image?.resize() {
             //UIActivityViewControllerに渡す配列を作成
             let shareItems = [shareImage]
             //UIActivityViewControllerにシェア画像を渡す
