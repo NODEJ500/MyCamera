@@ -8,17 +8,12 @@
 import UIKit
 
 class EffectViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        //画面遷移時に元の画像を表示
-        effectImage.image = originalImage
-    }
     
     //エフェクト前画像
     //前の画面より画像を設定
     var originalImage:UIImage?
+    //選択中のエフェクト添字
+    var filterSelectNumber = 0
     
     //フィルタ名を列挙した配列（Array)
     //0.モノクロ
@@ -31,26 +26,28 @@ class EffectViewController: UIViewController {
     //7.Transfer
     //8.Sepia Tone
     
-  
-    //選択中のエフェクト添字
-    var filterSelectNumber = 0
+    let filterArray = ["CIPhotoEffectMono",
+                        "CIPhotoEffectChrome",
+                        "CIPhotoEffectFade",
+                        "CIPhotoEffectInstant",
+                        "CIPhotoEffectNoir",
+                        "CIPhotoEffectProcess",
+                        "CIPhotoEffectTonal",
+                        "CIPhotoEffectTransfer",
+                        "CIPhotoEffectSepia Tone",
+      ]
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        //画面遷移時に元の画像を表示
+        effectImage.image = originalImage
+    }
     
     @IBOutlet weak var effectImage: UIImageView!
     
-    let filterArray = ["CIPhotoEffectMono",
-                         "CIPhotoEffectChrome",
-                         "CIPhotoEffectFade",
-                         "CIPhotoEffectInstant",
-                         "CIPhotoEffectNoir",
-                         "CIPhotoEffectProcess",
-                         "CIPhotoEffectTonal",
-                         "CIPhotoEffectTransfer",
-                         "CIPhotoEffectSepia Tone",
-      ]
-    
     @IBAction func effectButtonAction(_ sender: Any) {
         
-    //エフェクト前画像をアンラップしてエフェクト用画像として取り出す
+        //エフェクト前画像をアンラップしてエフェクト用画像として取り出す
         if let image = originalImage {
             //フィルター名を指定
             let filterName = filterArray[filterSelectNumber]
@@ -87,8 +84,8 @@ class EffectViewController: UIViewController {
             //エフェクト後の画像をCGImage形式からUIImage形式に変更。その後に回転角度を指定。そしてImageViewに表示
             effectImage.image = UIImage(cgImage: cgImage, scale: 1.0, orientation: rotate)
            
-            }
          }
+      }
     @IBAction func shareButtonAction(_ sender: Any) {
         //表示画像をアンラップしてシェア画像を取り出す
         if let shareImage = effectImage.image?.resize() {

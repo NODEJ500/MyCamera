@@ -9,6 +9,8 @@ import UIKit
 
 class ViewController: UIViewController,UINavigationControllerDelegate,UIImagePickerControllerDelegate {
 
+    //次の画面に遷移するときに渡す画像を格納する場所
+    var captureImage:UIImage?
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -64,9 +66,6 @@ class ViewController: UIViewController,UINavigationControllerDelegate,UIImagePic
             self.performSegue(withIdentifier: "showEffectView", sender: nil)
         })
     }
-    
-    //次の画面に遷移するときに渡す画像を格納する場所
-    var captureImage:UIImage?
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if let nextViewController = segue.destination as? EffectViewController {
